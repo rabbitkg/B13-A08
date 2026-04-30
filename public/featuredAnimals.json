@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Australian Cross Bull",
+    "price": 220000,
+    "weight": 280,
+    "location": "Bogura",
+    "image": "https://images.unsplash.com/photo-1507103011901-e954d6ec0988",
+    "description": "A healthy Australian cross bull with strong build and good meat quality. Well-fed and ideal for Qurbani. Properly vaccinated and maintained in a hygienic environment."
+  },
+  {
+    "id": 2,
+    "name": "Black Bangle Goat",
+    "price": 35000,
+    "weight": 40,
+    "location": "Dhaka",
+    "image": "https://images.unsplash.com/photo-1657257974728-245a37db588e",
+    "description": "Premium Black Bengal goat known for its tender meat and high demand during Qurbani. Active, healthy, and raised with natural feed."
+  },  
+  {
+    "id": 3,
+    "name": "Brahman Cross Bull",
+    "price": 270000,
+    "weight": 550,
+    "location": "Rangpur",
+    "image": "https://images.unsplash.com/photo-1611007070579-b47a009f26ac",
+    "description": "Large Brahman cross bull with excellent body weight and strong physique. Perfect for large Qurbani shares. Well cared for, disease-free, and properly nourished."
+  },
+  {
+    "id": 4,
+    "name": "Desi Sheep",
+    "price": 35000,
+    "weight": 30,
+    "location": "Rajshahi",
+    "image": "https://plus.unsplash.com/premium_photo-1746374209620-bb74ced0cb2d",
+    "description": "Locally raised desi sheep with good health and clean feeding habits. Suitable for small family Qurbani. Maintained in a natural rural environment."
+  }
+]

@@ -1,6 +1,8 @@
 import HeroBanner from "@/components/shared/Hero-banner";
 import NewHeroBanner from "@/components/shared/NewHeroBanner";
 import Image from "next/image";
+import FeaturedAnimalsPage from "./featuredAnimals/page";
+import ExtraSections from "@/components/shared/ExtraSections";
 
 export default function Home() {
   return (
@@ -9,6 +11,8 @@ export default function Home() {
 
     {/* <HeroBanner /> */}
     <NewHeroBanner/>
+    <FeaturedAnimalsPage/>
+    <ExtraSections/>
     </div>
   );
 }
