@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Sahiwal Cow",
+    "type": "Cow",
+    "origin": "Pakistan/India",
+    "description": "Famous for strong body, ভালো মাংস quality, and ideal for Qurbani.",
+    "image": "https://images.unsplash.com/photo-1720713526761-e0938831a2af"
+  },
+  {
+    "name": "Brahman Cow",
+    "type": "Cow",
+    "origin": "USA",
+    "description": "Large size and খুবই শক্তিশালী breed, perfect for big Qurbani.",
+    "image": "https://images.unsplash.com/photo-1500595046743-cd271d694d30"
+  },
+  {
+    "name": "Black Bengal Goat",
+    "type": "Goat",
+    "origin": "Bangladesh",
+    "description": "Very popular goat breed, known for tasty meat and small size.",
+    "image": "https://images.unsplash.com/photo-1777392589316-47307d2aee20"
+  },
+  {
+    "name": "Garole Sheep",
+    "type": "Sheep",
+    "origin": "Bangladesh/India",
+    "description": "Small-sized sheep, ভালো মানের মাংস and suitable for small Qurbani.",
+    "image": "https://images.unsplash.com/photo-1621852653100-72b9833ac2ad"
+  }
+]

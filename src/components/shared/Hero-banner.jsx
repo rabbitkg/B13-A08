@@ -1,10 +1,11 @@
 import Image from "next/image";
-import Link from "next/link";
+
 
 
 const HeroBanner = () => {
     return (
-        <div>
+        <div className="py-10 ">
+                <h2 className="text-4xl font-bold mb-8">Welcome to Our Qurbani Store:</h2>
             <div className="carousel w-full">
                 <div id="slide1" className="carousel-item relative w-full">
                     <Image
@@ -14,22 +15,7 @@ const HeroBanner = () => {
                         width={800}
                         height={600}
                     />
-                    <div className="absolute inset-0 flex items-end justify-center pb-50">
-                    <Link href="/all-animals">
-                        <button
-                            
-                            className="px-10 py-4 text-2xl md:text-xl font-bold 
-                            border-2 border-white text-white
-                            bg-white/10 backdrop-blur-sm 
-                            hover:bg-white/30 hover:text-white/150
-                            transition duration-300 
-                            shadow-[4px_4px_0_rgba(0,0,0,0.4)] rounded-xl"
-                            >
-                            Browse All Animals
-                        </button>
-                            </Link>
-
-                    </div>
+                    
 
 
                     <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
@@ -51,22 +37,7 @@ const HeroBanner = () => {
                         height={600}
                     />
 
-                    <div className="absolute inset-0 flex items-end justify-center pb-50">
-                    <Link href="/all-animals">
-                        <button
-                            
-                            className="px-10 py-4 text-2xl md:text-xl font-bold 
-                            border-2 border-white text-white
-                            bg-white/10 backdrop-blur-sm 
-                            hover:bg-white/30 hover:text-white/150
-                            transition duration-300 
-                            shadow-[4px_4px_0_rgba(0,0,0,0.4)] rounded-xl"
-                            >
-                            Browse All Animals
-                        </button>
-                            </Link>
-
-                    </div>
+                   
 
 
 

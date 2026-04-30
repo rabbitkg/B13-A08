@@ -12,3 +12,10 @@ export async function getFeaturedAnimals() {
     const data = await res.json();
     return data;
 }
+export async function getTopBreads() {
+    const res = await fetch(
+        "http://localhost:3000/topBreads.json",
+    );
+    const data = await res.json();
+    return data;
+}

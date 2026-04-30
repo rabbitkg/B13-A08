@@ -13,6 +13,7 @@ export default function Home() {
     <NewHeroBanner/>
     <FeaturedAnimalsPage/>
     <ExtraSections/>
+    <HeroBanner/>
     </div>
   );
 }
