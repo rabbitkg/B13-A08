@@ -7,7 +7,8 @@ import logo from '@/assets/logo-nav.png'
 
 const Navbar = () => {
     return (
-        <div className='container flex mx-auto justify-between my-4'>
+        <div className='top-0 z-50 shadow-md'>
+            <div className='container flex mx-auto justify-between my-4 sticky'>
             <div>
                 <Image href="/" src={logo} alt='logo' width={200} height={50} className='rounded-4xl cursor-pointer' />
             </div>
@@ -30,6 +31,9 @@ const Navbar = () => {
                 <Link href={"/register"}>Register</Link>
                 </button>
             </div>
+                    
+        </div>
+                        {/* <div className='border border-gray-300 mb-4 shadow-lg'></div> */}
         </div>
     );
 };

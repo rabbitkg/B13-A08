@@ -1,7 +1,14 @@
+import HeroBanner from "@/components/shared/Hero-banner";
+import NewHeroBanner from "@/components/shared/NewHeroBanner";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <h2 className="font-bold text-5xl text-purple-500">Homepage</h2>
+    <div className="mt-4">
+    
+
+    {/* <HeroBanner /> */}
+    <NewHeroBanner/>
+    </div>
   );
 }
