@@ -5,7 +5,9 @@ import Image from "next/image";
 const HeroBanner = () => {
     return (
         <div className="py-10 ">
-                <h2 className="text-4xl font-bold mb-8">Welcome to Our Qurbani Store:</h2>
+            <ol className="list-disc pl-5">
+                <li className="text-4xl font-bold mb-8">See here for more information:</li>
+            </ol>
             <div className="carousel w-full">
                 <div id="slide1" className="carousel-item relative w-full">
                     <Image
