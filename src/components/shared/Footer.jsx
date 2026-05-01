@@ -6,13 +6,13 @@ import twitterIcon from "@/assets/twitter.png";
 
 const Footer = () => {
     return (
-        <footer className=" w-full border-t-4 border-black/30 bg-yellow-100 mt-auto">
+        <footer className=" w-full border-t-4 border-black/30 bg-neutral text-neutral-content mt-auto">
             <div className="container mx-auto">
-                <div className="max-w-7xl mx-auto px-6 py-15 grid grid-cols-1 md:grid-cols-4 gap-6 text-black">
+                <div className="max-w-7xl mx-auto px-6 py-15 grid grid-cols-1 md:grid-cols-4 gap-6 text-white/70">
 
                     {/* About Section */}
                     <div className="col-span-2">
-                        <h2 className="text-xl font-bold mb-3 border-b-2 border-black inline-block">
+                        <h2 className="text-xl font-bold mb-3 border-b-2 border-white/50 inline-block">
                             About
                         </h2>
                         <p className="text">
@@ -23,7 +23,7 @@ const Footer = () => {
 
                     {/* Contact Info */}
                     <div>
-                        <h2 className="text-xl font-bold mb-3 border-b-2 border-black inline-block">
+                        <h2 className="text-xl font-bold mb-3 border-b-2 border-white/50 inline-block">
                             Contact
                         </h2>
                         <p className="text">Dhaka, Bangladesh</p>
@@ -33,12 +33,12 @@ const Footer = () => {
 
                     {/* Social Links */}
                     <div>
-                        <h2 className="text-xl font-bold mb-3 border-b-2 border-black inline-block">
+                        <h2 className="text-xl font-bold mb-3 border-b-2 border-white/50 inline-block">
                             Follow Us
                         </h2>
 
                         <div className="flex gap-4 mt-2">
-                            <div className="w-10 h-10 flex items-center justify-center border-2 border-gray-400 rounded-full p-3 hover:scale-110 transition cursor-pointer">
+                            <div className="w-10 h-10 flex items-center justify-center border-2 border-gray-400 rounded-full p-3 hover:scale-110 transition cursor-pointer bg-white">
                                 <Image
                                     src={facebookIcon}
                                     alt="Facebook"
@@ -48,7 +48,7 @@ const Footer = () => {
                                 />
                             </div>
 
-                            <div className="w-10 h-10 flex items-center justify-center border-2 border-gray-400 rounded-full hover:scale-110 transition cursor-pointer">
+                            <div className="w-10 h-10 flex items-center justify-center border-2 border-gray-400 rounded-full hover:scale-110 transition cursor-pointer bg-white">
                                 <Image
                                     src={instagramIcon}
                                     alt="Instagram"
@@ -58,7 +58,7 @@ const Footer = () => {
                                 />
                             </div>
 
-                            <div className="w-10 h-10 flex items-center justify-center border-2 border-gray-400 rounded-full hover:scale-110 transition cursor-pointer">
+                            <div className="w-10 h-10 flex items-center justify-center border-2 border-gray-400 rounded-full hover:scale-110 transition cursor-pointer bg-white">
                                 <Image
                                     src={twitterIcon}
                                     alt="Twitter"
@@ -73,7 +73,7 @@ const Footer = () => {
 
             </div>
             {/* Bottom Bar */}
-            <div className="text-center border-t-2 border-black py-5 text-sm bg-yellow-200">
+            <div className="text-center border-t-2 border-white/50 py-5 text-sm bg-gray-800 text-gray-300">
                 © {new Date().getFullYear()} Qurbani Market. All rights reserved.
             </div>
         </footer>
