@@ -21,17 +21,17 @@ const BookingForm = () => {
             <div className="mt-2 p-6 rounded-md ">
                 <h2 className="text-2xl font-bold mb-4">Book This Animal</h2>
 
-                <form onSubmit={handleBooking} className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <form onSubmit={handleBooking} className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
                   
-                    <input name="name" type="text" placeholder="Your Name" className="input input-bordered w-full" required />                    
+                    <input name="name" type="text" placeholder="Your Name" className="input input-bordered w-full border-slate-400 text-lg" required />                    
 
-                    <input name="email" type="email" placeholder="Your Email" className="input input-bordered w-full" required />
+                    <input name="email" type="email" placeholder="Your Email" className="input input-bordered w-full text-lg border-slate-400" required />
 
-                    <input name="phone" type="text" placeholder="Phone Number" className="input input-bordered w-full" required />
+                    <input name="phone" type="text" placeholder="Phone Number" className="input input-bordered w-full text-lg border-slate-400" required />
 
-                    <input name="address" type="text" placeholder="Address" className="input input-bordered w-full md:col-span-2" required />
+                    <input name="address" type="text" placeholder="Address" className="input input-bordered w-full md:col-span-2 text-lg border-slate-400" required />
 
-                    <button type="submit" className="btn btn-primary md:col-span-2">
+                    <button type="submit" className="btn btn-primary md:col-span-2 text-lg">
                         Confirm Booking
                     </button>
                 </form>
