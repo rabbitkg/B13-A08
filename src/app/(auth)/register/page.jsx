@@ -5,7 +5,7 @@ import { authClient } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
 
 import { useState } from "react";
-import { useForm, Watch } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { toast, ToastContainer } from "react-toastify";
 
@@ -44,7 +44,7 @@ const RegisterPage = () => {
             
         }
     }
-    console.log(watch("email"), watch("password"), watch("name"), watch("photoUrl"));
+    // console.log(watch("email"), watch("password"), watch("name"), watch("photoUrl"));
 
 
     return (

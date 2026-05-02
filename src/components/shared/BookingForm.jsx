@@ -4,10 +4,6 @@ import { toast } from 'react-toastify';
 import { FaUser, FaPhoneAlt } from 'react-icons/fa';
 import { MdEmail, MdLocationOn } from 'react-icons/md';
 
-export const metadata = {
-  title: "Qurbani Hat",
-  description: "Best place to buy and sell qurbani animals online",
-};
 
 const BookingForm = () => {
 
