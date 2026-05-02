@@ -11,6 +11,7 @@ import {
   MdEdit 
 } from "react-icons/md";
 
+
 const ProfilePage = () => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -80,7 +81,6 @@ const ProfilePage = () => {
                                 </p>
                             </div>
 
-                            {/* Right Side - About & Actions */}
                             <div className="lg:w-3/5">
                                 <h3 className="text-2xl font-semibold text-gray-800 mb-6 flex items-center gap-3">
                                     <MdPerson className="text-blue-600" /> About
@@ -111,7 +111,6 @@ const ProfilePage = () => {
                                     )}
                                 </div>
 
-                                {/* Edit Button */}
                                 <button
                                     onClick={() => router.push("/profile/update")}
                                     className="mt-8 w-full lg:w-auto flex items-center justify-center gap-3 bg-purple-500 hover:bg-purple-700 text-white px-10 py-4 rounded-2xl text-lg font-medium transition-all duration-200 shadow-md hover:shadow-lg cursor-pointer"

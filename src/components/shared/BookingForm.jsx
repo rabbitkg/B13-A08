@@ -1,6 +1,13 @@
 'use client';
 import React from 'react';
 import { toast } from 'react-toastify';
+import { FaUser, FaPhoneAlt } from 'react-icons/fa';
+import { MdEmail, MdLocationOn } from 'react-icons/md';
+
+export const metadata = {
+  title: "Qurbani Hat",
+  description: "Best place to buy and sell qurbani animals online",
+};
 
 const BookingForm = () => {
 
@@ -9,33 +16,78 @@ const BookingForm = () => {
 
         const formData = new FormData(e.target);
         const data = Object.fromEntries(formData.entries());
+
         console.log("Booking Data:", data);
 
-        toast.success("Booking successful!");
+        toast.success("Booking successful! We will contact you soon.");
 
         e.target.reset();
     };
 
     return (
-        <div>
-            <div className="mt-2 p-6 rounded-md ">
-                <h2 className="text-2xl font-bold mb-4">Book This Animal</h2>
+        <div className="bg-white/80 rounded-2xl shadow-md p-6 sm:p-8">
 
-                <form onSubmit={handleBooking} className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
-                  
-                    <input name="name" type="text" placeholder="Your Name" className="input input-bordered w-full border-slate-400 text-lg" required />                    
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-6">
+                Book This Animal
+            </h2>
 
-                    <input name="email" type="email" placeholder="Your Email" className="input input-bordered w-full text-lg border-slate-400" required />
+            <form
+                onSubmit={handleBooking}
+                className="grid grid-cols-1 md:grid-cols-2 gap-5"
+            >
 
-                    <input name="phone" type="text" placeholder="Phone Number" className="input input-bordered w-full text-lg border-slate-400" required />
+                <div className="relative">
+                    <FaUser className="absolute top-1/2 left-3 -translate-y-1/2 text-gray-400" />
+                    <input
+                        name="name"
+                        type="text"
+                        placeholder="Your Name"
+                        className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none text-sm sm:text-base"
+                        required
+                    />
+                </div>
 
-                    <input name="address" type="text" placeholder="Address" className="input input-bordered w-full md:col-span-2 text-lg border-slate-400" required />
+                <div className="relative">
+                    <MdEmail className="absolute top-1/2 left-3 -translate-y-1/2 text-gray-400 text-lg" />
+                    <input
+                        name="email"
+                        type="email"
+                        placeholder="Your Email"
+                        className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none text-sm sm:text-base"
+                        required
+                    />
+                </div>
 
-                    <button type="submit" className="btn btn-primary md:col-span-2 text-lg">
-                        Confirm Booking
-                    </button>
-                </form>
-            </div>
+                <div className="relative">
+                    <FaPhoneAlt className="absolute top-1/2 left-3 -translate-y-1/2 text-gray-400 text-sm" />
+                    <input
+                        name="phone"
+                        type="text"
+                        placeholder="Phone Number"
+                        className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none text-sm sm:text-base"
+                        required
+                    />
+                </div>
+
+                <div className="relative md:col-span-2">
+                    <MdLocationOn className="absolute top-1/2 left-3 -translate-y-1/2 text-gray-400 text-lg" />
+                    <input
+                        name="address"
+                        type="text"
+                        placeholder="Full Address"
+                        className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none text-sm sm:text-base"
+                        required
+                    />
+                </div>
+
+                <button
+                    type="submit"
+                    className="md:col-span-2 w-full py-3 rounded-xl bg-green-600 hover:bg-green-700 text-white font-semibold text-lg shadow-md hover:shadow-lg transition duration-300 cursor-pointer"
+                >
+                    Confirm Booking
+                </button>
+
+            </form>
         </div>
     );
 };

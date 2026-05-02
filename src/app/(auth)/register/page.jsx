@@ -50,7 +50,7 @@ const RegisterPage = () => {
     return (
         <div className='container mx-auto py-8 min-h-[60vh] flex items-center justify-center '>
             <div className="p-15 rounded-md bg-white">
-                <h1 className="font-bold text-5xl text-center mb-6">Register your account</h1>
+                <h1 className="font-bold text-3xl md:text-4xl text-center mb-6">Register your account</h1>
 
                 <form className="space-y-5" onSubmit={handleSubmit(handleRegisterFunc)}>
                     <fieldset className="fieldset">

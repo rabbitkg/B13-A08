@@ -1,42 +1,61 @@
-
-
 import { getFeaturedAnimals } from '@/lib/data';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const FeaturedAnimalsPage = async ({ params }) => {
+const FeaturedAnimalsPage = async () => {
     const featuredAnimals = await getFeaturedAnimals();
-    return (
-        <div>
-            <h1 className='text-6xl text-center font-bold my-8'>Featured Animals</h1>
-            <div className='gap-4 grid grid-cols-1 md:grid-cols-2 container mx-auto'>
 
-            {featuredAnimals.map((animal) => (
-                <div key={animal.id} className='container mx-auto'>
-                    <div className="card card-side bg-base-100 shadow-xl border border-gray-300">
-                        <figure>
+    return (
+        <div className="px-4 md:px-0">
+            <h1 className='text-3xl md:text-5xl lg:text-6xl text-center font-bold my-8'>
+                Featured Animals
+            </h1>
+
+            <div className='grid gap-6 grid-cols-1 md:grid-cols-2 container mx-auto'>
+                {featuredAnimals.map((animal) => (
+                    <div key={animal.id} className="card bg-base-100 shadow-xl border border-gray-200">
+
+                        <figure className="w-full">
                             <Image
                                 src={animal.image}
                                 alt={animal.name}
-                                width={400}
-                                height={250}
-                                className="rounded-lg"
-                                />
+                                width={600}
+                                height={400}
+                                className="w-full h-56 md:h-64 object-cover rounded-t-xl"
+                            />
                         </figure>
+
                         <div className="card-body">
-                            <h2 className="card-title text-3xl">{animal.name}</h2>
-                            <p >Price: ${animal.price.toLocaleString()}</p>
-                            <p className='text-xl font-bold'>Weight: {animal.weight} kg</p>
-                            <p>Location: {animal.location}</p>
-                            <p>{animal.description}</p>
-                            <p></p>
-                            <Link href={`/all-animals`} className="card-actions justify-end">
-                                <button className="btn btn-primary">See More Animals</button>
-                            </Link>
+                            <h2 className="card-title text-xl md:text-2xl lg:text-3xl">
+                                {animal.name}
+                            </h2>
+
+                            <p className="text-lg">
+                                Price: ${animal.price.toLocaleString()}
+                            </p>
+
+                            <p className='text-base md:text-lg'>
+                                Weight: <span className="font-bold">{animal.weight} kg</span>
+                            </p>
+
+                            <p className="text-sm md:text-base text-gray-600">
+                                Location: {animal.location}
+                            </p>
+
+                            <p className="text-sm md:text-base line-clamp-2">
+                                {animal.description}
+                            </p>
+
+                            <div className="card-actions justify-end mt-4">
+                                <Link href="/all-animals">
+                                    <button className="btn bg-purple-600 hover:bg-purple-700 text-white">
+                                        See More
+                                    </button>
+                                </Link>
+                            </div>
                         </div>
                     </div>
-                </div>
-            ))}
+                ))}
             </div>
         </div>
     );

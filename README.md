@@ -1,36 +1,156 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🐄 QurbaniHat – Livestock Booking Platform  
+### Assignment Category: category-A8-Pineapple
 
-## Getting Started
+🌐 **Live Site:** https://your-live-link.com  
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📌 Project Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**QurbaniHat** is a modern livestock marketplace platform where users can explore, view, and book animals for Qurbani such as cows and goats.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+The platform ensures a **smooth, responsive, and user-friendly experience** with authentication, sorting, and booking features.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🎯 Purpose
 
-To learn more about Next.js, take a look at the following resources:
+The goal of this project is to build a **fully responsive single-page application (SPA)** with:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Authentication system
+- Dynamic data rendering
+- Protected routes
+- Modern UI/UX design
+- Real-world marketplace concept
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🚀 Key Features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 🧭 Layout Structure
+- Responsive **Navbar**
+  - Logo
+  - Home & All Animals links
+  - Auth-based UI (Login/Register OR Avatar + Logout)
+- Footer with:
+  - Contact Info
+  - Social Links
+  - About Section
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+### 🐐 Animal Marketplace
+- JSON-based animal data (6+ animals)
+- Animal properties:
+  - Name, Type, Breed
+  - Price, Weight, Age
+  - Location, Description
+  - Image & Category
+
+---
+
+### 🏠 Home Page
+- Hero Banner with CTA
+- Featured Animals section
+- Extra Sections:
+  - Qurbani Tips
+  - Top Breeds
+
+---
+
+### 🛒 All Animals Page
+- Dynamic animal cards
+- Sort by price (Low → High / High → Low)
+- Responsive grid layout
+
+---
+
+### 📄 Animal Details Page
+- Full animal information
+- Booking form:
+  - Name
+  - Email
+  - Phone
+  - Address
+- 🔐 Login required
+- ✅ Toast success message after booking
+- 🔄 Form resets after submit (no DB storage)
+
+---
+
+## 🔐 Authentication System
+
+### 🔑 Login
+- Email & Password login
+- Google Social Login
+- Error handling with toast
+- Redirect after success
+
+### 📝 Registration
+- Name, Email, Photo URL, Password
+- Google signup option
+- Redirect to login after success
+
+---
+
+## 👤 My Profile (Challenge Feature)
+
+### ✅ Profile Page
+- Shows:
+  - User Name
+  - Email
+  - Profile Image
+
+### 🔄 Update Profile
+- Update Name & Image
+- Uses Better Auth:
+👉 https://better-auth.com/docs/concepts/users-accounts#update-user
+
+---
+
+## 🎨 UI & UX
+
+- Fully **Responsive Design** (Mobile, Tablet, Desktop)
+- Modern UI with Tailwind + DaisyUI
+- Smooth interactions & clean layout
+
+---
+
+## 🔔 Additional Features
+
+- ✅ Toast Notifications (React Toastify)
+- ⏳ Loading states
+- ❌ Custom Not Found Page
+- 🎯 Unique design based on Qurbani theme
+
+---
+
+## ⚡ NPM Packages Used
+
+- **next.js** – Framework
+- **react** – UI library
+- **tailwindcss** – Styling
+- **daisyui** – UI components
+- **react-icons** – Icons
+- **react-toastify** – Toast notifications
+- **better-auth** – Authentication system
+
+### 🎯 Extra Package (Challenge)
+- (Example) **Animate.css / Lottie / React-Spring**
+
+---
+
+## 🔐 Environment Variables
+
+Sensitive data is secured using `.env.local`:
+
+```env
+NEXT_PUBLIC_AUTH_URL=your_auth_url
+AUTH_SECRET=your_secret_key
+
+
+## 👨‍💻 Author  
+**Md. Fazle Rabbi**  
+📧 rabbitkgbd@gmail.com
+
+</div>

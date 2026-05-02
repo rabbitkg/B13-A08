@@ -86,7 +86,7 @@ const LoginPage = () => {
                     Don&apos;t have an account? <Link href="/register" className="text-blue-500 hover:underline">Register</Link>
                 </p>
             </div>
-            <ToastContainer position="top-center" className="mt-27" />
+            <ToastContainer position="top-center" className="mt-15" />
         </div>
     );
 };
