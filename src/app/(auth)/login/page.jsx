@@ -1,5 +1,6 @@
 'use client';
 
+import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import { useForm, Watch } from "react-hook-form";
 
@@ -7,8 +8,23 @@ const LoginPage = () => {
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
-    const handleLoginFunc = (data) => {
+    const handleLoginFunc = async (data) => {
         console.log(data);
+
+        const { data: res, error } = await authClient.signIn.email({
+            email: data.email, // required
+            password: data.password, // required
+            rememberMe: true,
+            callbackURL: "/",
+        });
+
+        console.log(res, error);
+        if (error) {
+            alert(error.message);
+        }
+        if (res) {
+            alert("Login successful!");
+        }
     }
     console.log(watch("email"), watch("password"));
 
@@ -24,7 +40,7 @@ const LoginPage = () => {
 
                         {errors.email && <span className="text-red-500 text-sm mt-1">{errors.email.message}</span>}
                     </fieldset>
-                    <fieldset className="fieldset mb-5">
+                    <fieldset className="fieldset mb-7">
                         <legend className="fieldset-legend text-xl">Password</legend>
                         <input type="password" className="input w-full text-lg" {...register("password", { required: "Password is required" })} placeholder="Type here password" />
 
