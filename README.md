@@ -148,9 +148,9 @@ Sensitive data is secured using `.env.local`:
 NEXT_PUBLIC_AUTH_URL=your_auth_url
 AUTH_SECRET=your_secret_key
 
+---
 
 ## 👨‍💻 Author  
 **Md. Fazle Rabbi**  
 📧 rabbitkgbd@gmail.com
 
-</div>
