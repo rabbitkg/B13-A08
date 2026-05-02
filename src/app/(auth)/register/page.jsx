@@ -1,12 +1,18 @@
 'use client';
 
 import { authClient } from "@/lib/auth-client";
+
+import { useRouter } from "next/navigation";
+
 import { useState } from "react";
 import { useForm, Watch } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { toast, ToastContainer } from "react-toastify";
 
 const RegisterPage = () => {
-
+    
+    const router = useRouter();
+    
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
     const [isShowingPassword, setIsShowingPassword] = useState(false);
@@ -16,20 +22,26 @@ const RegisterPage = () => {
         const { email, password, name, photoUrl } = data;
         console.log(email, password, name, photoUrl);
 
-
+        
         const { data: res, error } = await authClient.signUp.email({
             name: name, // required
             email: email, // required
             password: password, // required
             image: photoUrl,
-            callbackURL: "/",
+            autoSignIn: false,
         })
         console.log(res, error);
         if (error) {
-            alert(error.message);
+            toast.error(error.message);
         }
         if (res) {
-            alert("Registration successful! Please check your email to verify your account.");
+            await authClient.signOut();
+            toast.success("Registration successful! Please login.");
+            
+            setTimeout(() => {
+                router.push("/login");
+            }, 1500);
+            
         }
     }
     console.log(watch("email"), watch("password"), watch("name"), watch("photoUrl"));
@@ -81,6 +93,7 @@ const RegisterPage = () => {
                     Don&apos;t have an account? <Link href="/register" className="text-blue-500 hover:underline">Register</Link>
                 </p> */}
             </div>
+            <ToastContainer position="top-center" className="mt-27" />
         </div>
     );
 };

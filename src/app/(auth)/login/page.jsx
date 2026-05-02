@@ -5,8 +5,12 @@ import Link from "next/link";
 import { useState } from "react";
 import { useForm, Watch } from "react-hook-form";
 import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
+import { toast, ToastContainer } from "react-toastify";
+import { useRouter } from "next/navigation";
+
 
 const LoginPage = () => {
+    const router = useRouter();
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
@@ -19,24 +23,29 @@ const LoginPage = () => {
             email: data.email, // required
             password: data.password, // required
             rememberMe: true,
-            callbackURL: "/",
+            redirect: false,
+            // callbackURL: "/",
         });
 
         console.log(res, error);
         if (error) {
-            alert(error.message);
+            toast.error(error.message);
         }
         if (res) {
-            alert("Login successful!");
+            toast.success("Login successful!");
+
+            setTimeout(() => {
+                router.push("/");
+            }, 1500); 
         }
     }
     console.log(watch("email"), watch("password"));
 
-    const handleGoogleSignin = async()=>{
+    const handleGoogleSignin = async () => {
         const data = await authClient.signIn.social({
-    provider: "google",
-  });
-    console.log(data, "google sign in data");
+            provider: "google",
+        });
+        console.log(data, "google sign in data");
 
     }
 
@@ -69,14 +78,15 @@ const LoginPage = () => {
 
                 <div className="py-3 items-center justify-center text-center gap-1 flex flex-col">
                     <p>or use a Social Network</p>
-                <button className='btn border-blue-500 text-blue-500' onClick={handleGoogleSignin}><FaGoogle />
-                    Login with google</button>
+                    <button className='btn border-blue-500 text-blue-500' onClick={handleGoogleSignin}><FaGoogle />
+                        Login with google</button>
                 </div>
 
                 <p className="mt-4 text-center border-t-1 border-slate-400 pt-4">
                     Don&apos;t have an account? <Link href="/register" className="text-blue-500 hover:underline">Register</Link>
                 </p>
             </div>
+            <ToastContainer position="top-center" className="mt-27" />
         </div>
     );
 };
