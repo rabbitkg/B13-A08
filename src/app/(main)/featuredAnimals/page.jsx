@@ -31,7 +31,7 @@ const FeaturedAnimalsPage = async ({ params }) => {
                             <p>{animal.description}</p>
                             <p></p>
                             <Link href={`/all-animals`} className="card-actions justify-end">
-                                <button className="btn btn-primary">Buy Your Animals</button>
+                                <button className="btn btn-primary">See More Animals</button>
                             </Link>
                         </div>
                     </div>
