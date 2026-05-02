@@ -106,7 +106,7 @@ const UpdateProfilePage = () => {
                         <div className="pt-6 space-y-4">
                             <button
                                 type="submit"
-                                className="w-full bg-purple-500 hover:bg-purple-700 text-white py-5 text-2xl font-semibold rounded-2xl transition-all duration-200 cursor-pointer"
+                                className="w-full bg-purple-500 hover:bg-purple-700 text-white py-4 text-xl font-semibold rounded-2xl transition-all duration-200 cursor-pointer"
                             >
                                 Update Profile
                             </button>
@@ -114,7 +114,7 @@ const UpdateProfilePage = () => {
                             <Link href="/profile" className="block">
                                 <button
                                     type="button"
-                                    className="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 py-5 text-2xl font-semibold rounded-2xl transition-all duration-200 cursor-pointer"
+                                    className="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 py-4 text-xl font-semibold rounded-2xl transition-all duration-200 cursor-pointer"
                                 >
                                     Cancel
                                 </button>

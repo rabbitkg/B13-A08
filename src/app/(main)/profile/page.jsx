@@ -28,15 +28,16 @@ const ProfilePage = () => {
 
     if (loading) {
         return (
-            <div className="min-h-screen flex items-center justify-center bg-gray-50">
-                <p className="text-xl text-gray-600">Loading profile...</p>
+            <div className="min-h-screen flex items-center justify-center ">
+                <span className="loading loading-dots loading-xl"></span>
+
             </div>
         );
     }
 
     if (!user) {
         return (
-            <div className="min-h-screen flex items-center justify-center bg-gray-50">
+            <div className="min-h-screen flex items-center justify-center ">
                 <div className="text-center">
                     <h2 className="text-2xl font-semibold mb-4">You are not logged in</h2>
                     <button
