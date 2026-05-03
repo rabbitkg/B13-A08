@@ -1,7 +1,7 @@
 # 🐄 QurbaniHat – Livestock Booking Platform  
 ### Assignment Category: category-A8-Pineapple
 
-🌐 **Live Site:** https://your-live-link.com  
+🌐 **Live Site:** https://b13-a08-v138.vercel.app/  
 
 ---
 
